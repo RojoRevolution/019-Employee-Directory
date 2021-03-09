@@ -1,11 +1,11 @@
 import React from "react";
 
 
-function EmployeeList() {
+function EmployeeList(props) {
     return (
         <div className="container">
             <ul>
-                <li>This is a name</li>
+                <li>{props.result}</li>
             </ul>
         </div>
     )

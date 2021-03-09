@@ -1,8 +1,8 @@
 import axios from "axios";
-const BASEURL = "futuramaapi.herokuapp.com/api/v2/characters?search=";
+const BASEURL = "https://randomuser.me/api/?results=20";
 
 export default {
-    search: function () {
+    search: function (query) {
         return axios.get(BASEURL + query);
     }
 };
