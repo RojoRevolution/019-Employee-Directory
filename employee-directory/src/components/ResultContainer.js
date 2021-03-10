@@ -40,7 +40,7 @@ class ResultsContainer extends Component {
         event.preventDefault();
     }
 
-    sortByFName = () => {
+    sortByFirstName = () => {
         const sortedEmployees = this.state.results.sort((a, b) => {
             if (b.name.first > a.name.first) {
                 return -1
@@ -66,7 +66,7 @@ class ResultsContainer extends Component {
                 <div className="container">
                     <SearchBar search={this.state.search} handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit} />
                     <table>
-                        <TableHead />
+                        <TableHead sortByFirstName={this.sortByFirstName} />
                         <EmployeeTable results={this.state.results} filter={this.state.search} />
 
                     </table>
