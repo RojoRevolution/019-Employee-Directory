@@ -7,6 +7,7 @@ import API from "../utils/API";
 
 class ResultsContainer extends Component {
     state = {
+        sortOrder: "",
         results: [],
         search: ""
     };
