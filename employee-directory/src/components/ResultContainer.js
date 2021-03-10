@@ -38,6 +38,27 @@ class ResultsContainer extends Component {
         event.preventDefault();
     }
 
+    sortByFName = () => {
+        const sortedEmployees = this.state.results.sort((a, b) => {
+            if (b.name.first > a.name.first) {
+                return -1
+            }
+            if (a.name.first > b.name.first) {
+                return 1
+            }
+            return 0;
+        });
+
+        if (this.state.sortOrder === "DESC") {
+            sortedEmployees.reverse();
+            this.setState({ sortOrder: "ASC" });
+        } else {
+            this.setState({ sortOrder: "DESC" });
+        }
+        this.setState({ results: sortedEmployees })
+    }
+
+
 
     render() {
         return (
@@ -53,15 +74,8 @@ class ResultsContainer extends Component {
                                 <td className="ms-2 p-2">Email</td>
                             </tr>
                         </thead>
-                        {/* <tbody> */}
-                        {/* 
-                            {
-                                this.state.results.map(item => (
-                                    <EmployeeTable id={item.login.uuid} img={item.picture.medium} firstName={item.name.first} lastName={item.name.last} email={item.email} phone={item.phone} />
-                            ))} */}
                         <EmployeeTable results={this.state.results} filter={this.state.search} />
 
-                        {/* </tbody> */}
                     </table>
                 </div>
             </div >

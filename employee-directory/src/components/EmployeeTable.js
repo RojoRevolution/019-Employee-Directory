@@ -9,8 +9,6 @@ function EmployeeList(props) {
 
     return (
         <tbody>
-            {/* {props.results.map(item => ( */}
-            {/* {props.results.filter(input => input.name.first.includes(props.filter)).map(item => ( */}
             {props.results.filter(input => input.name.first.toLowerCase().includes(props.filter)).map(item => (
                 < tr key={item.login.uuid} >
                     <td className="p-4"><img src={item.picture.medium} className="circle" /></td>
