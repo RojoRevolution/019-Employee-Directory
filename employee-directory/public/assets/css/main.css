@@ -5,13 +5,23 @@ html {
     box-sizing: inherit;
   }
 
+  h1 {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  }
+
   .margin-auto {
       margin: 0 auto;
   }
 
   .form-width {
-    max-width: 375px;
+    max-width: 750px;
     width: 100%;
+  }
+
+  .headerbg {
+    background: rgb(2,0,36);
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
   }
 
   .w-100 {
