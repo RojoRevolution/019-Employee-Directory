@@ -8,7 +8,7 @@ function SearchBar(props) {
                     <input
                         className="form-control"
                         type="text"
-                        placeholder="Enter Employee Name"
+                        placeholder="Search for an employee by name"
                         aria-label="default input example"
                         onChange={props.handleInputChange}
                         // value={props.search}
