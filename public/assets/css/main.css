@@ -52,4 +52,12 @@ html {
     border-radius: 50%;
   }
 
+  .cursor {
+    cursor: pointer;
+  }
+
+  .cursor:hover {
+    color:#ececec;
+  }
+
 
